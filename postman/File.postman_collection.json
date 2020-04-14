@@ -1,0 +1,55 @@
+{
+	"info": {
+		"_postman_id": "45386f8a-d1ce-44d9-8dee-b73b7fe1896e",
+		"name": "File",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{token}}",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "type",
+							"value": "user.avatar",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/alex/Downloads/alex.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/file/image",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"file",
+						"image"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
